@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  @Input() setup: string;
+  @Input() punchline: string;
+  constructor() {
+    this.setup = 'What did the cheese say when it looked in the mirror?';
+    this.punchline = 'Halloumi (Hello Me)';
+  }
 }
