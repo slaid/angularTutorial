@@ -1,4 +1,4 @@
-class Joke {
+export class Joke {
   setup: string;
   punchline: string;
   hide: boolean;

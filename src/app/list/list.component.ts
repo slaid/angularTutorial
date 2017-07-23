@@ -1,6 +1,5 @@
-import {Component, EventEmitter} from '@angular/core';
-import {AppComponent} from "../app.component";
-import '../model/joke.module';
+import { Component } from '@angular/core';
+import { Joke } from '../models/joke';
 
 @Component({
   selector: 'app-list',
@@ -17,7 +16,7 @@ export class ListComponent {
       new Joke('A kid threw a lump of cheddar at me', 'I thought ‘That’s not very mature’')
     ];
   }
-  toggle(joke) {
-    joke.hide = !joke.hide;
+  addJoke(joke) {
+    this.jokes.unshift(joke);
   }
 }
